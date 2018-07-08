@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eazy.firda.eazy.AddCar">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="50dp"
+        android:padding="20dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carName"
+                android:text=""
+                android:textColor="@color/black42"
+                android:backgroundTint="@color/black42"
+                android:fontFamily="@font/neosans_light"
+                android:textCursorDrawable="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producer"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carProducer"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:entries="@array/car_producer"
+                android:fontFamily="@font/neosans_light"
+                android:background="@drawable/shape_rect_black_outline">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carYear"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:entries="@array/car_year"
+                android:fontFamily="@font/neosans_light"
+                android:background="@drawable/shape_rect_black_outline">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body Type"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carBody"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:entries="@array/car_body"
+                android:fontFamily="@font/neosans_light"
+                android:background="@drawable/shape_rect_black_outline">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacity"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carSize"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:entries="@array/car_size"
+                android:fontFamily="@font/neosans_light"
+                android:background="@drawable/shape_rect_black_outline">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transmission"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/group_trans"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trans_auto"
+                    android:text="Auto"
+                    android:fontFamily="@font/neosans_light"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trans_manual"
+                    android:text="Manual"
+                    android:fontFamily="@font/neosans_light"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Price Rate (RM)"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carDailyRate"
+                android:text=""
+                android:textColor="@color/black42"
+                android:backgroundTint="@color/black42"
+                android:inputType="number"
+                android:fontFamily="@font/neosans_light"
+                android:textCursorDrawable="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Price Rate (RM)"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carWeeklyRate"
+                android:text=""
+                android:textColor="@color/black42"
+                android:backgroundTint="@color/black42"
+                android:inputType="number"
+                android:fontFamily="@font/neosans_light"
+                android:textCursorDrawable="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly Price Rate (RM)"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black42"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carMonthlyRate"
+                android:text=""
+                android:textColor="@color/black42"
+                android:backgroundTint="@color/black42"
+                android:textCursorDrawable="@null"
+                android:inputType="number"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green"
+        android:text="Add"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnAdd"/>
+</RelativeLayout>

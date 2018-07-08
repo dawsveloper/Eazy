@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eazy.firda.eazy.SearchActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_rect"
+                    android:backgroundTint="@color/green"
+                    android:padding="10dp"
+                    android:id="@+id/lay_epoint">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wallet"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/neosans_medium"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/epoint"
+                        android:text="RM 33,500"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search for a car"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+                android:textColor="@color/green500"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="find your favorite car at various places"
+                android:fontFamily="@font/neosans_light"
+                android:textColor="@color/green500"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_search_green_500_24dp"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:cursorVisible="false"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:hint="Pick Up Location"
+                android:textColor="@color/grey600"
+                android:id="@+id/search_location"
+                android:background="@drawable/shape_rect"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_search_green_500_24dp"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:cursorVisible="false"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:hint="Drop Off Location"
+                android:id="@+id/search_location2"
+                android:background="@drawable/shape_rect"
+                android:visibility="gone"/>
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/switch_location"
+                android:checked="true"
+                android:text="Return to same location"
+                android:fontFamily="@font/neosans_light"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/shape_rect"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/start_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="11"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1" />
+
+                        <TextView
+                            android:id="@+id/start_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/start_day"
+                            android:layout_centerHorizontal="true"
+                            android:text="February" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_below="@id/start_month"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/row1"/>
+
+                        <TextView
+                            android:id="@+id/start_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/row1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:text="Time: 03:00"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/shape_rect"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/end_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="11"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1" />
+
+                        <TextView
+                            android:id="@+id/end_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/end_day"
+                            android:layout_centerHorizontal="true"
+                            android:text="February" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray"
+                            android:layout_below="@id/end_month"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/row12"/>
+
+                        <TextView
+                            android:id="@+id/end_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/row12"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:text="Time: 03:00"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/green"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/white"
+                        android:src="@drawable/ic_keyboard_arrow_right_green_500_24dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="#ffffff"
+            android:background="@color/green"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/search"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

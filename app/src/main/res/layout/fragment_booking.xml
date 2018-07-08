@@ -1,0 +1,169 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eazy.firda.eazy.BookingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="List Order"
+                    android:textSize="@dimen/_15sdp"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:id="@+id/btn_wallet"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_view_list_black_24dp"
+                        android:tint="@color/black_2"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                    android:id="@+id/toggle_booktype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="2dp"
+                    app:sbg_animateSelector="fastOutSlowIn"
+                    app:sbg_animateSelectorDuration="1000"
+                    app:sbg_backgroundColor="@color/white"
+                    app:sbg_dividerColor="@color/white"
+                    app:sbg_dividerPadding="0dp"
+                    app:sbg_borderColor="@color/green"
+                    app:sbg_dividerRadius="0dp"
+                    app:sbg_dividerSize="0dp"
+                    app:sbg_position="1"
+                    app:sbg_radius="2dp"
+                    app:sbg_selectorColor="@color/green">
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="3"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        app:sb_text="Upcoming"
+                        app:sb_textColor="@color/green"
+                        app:sb_textColor_onSelection="@color/white" />
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="3"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        app:sb_text="Ongoing"
+                        app:sb_textColor="@color/green"
+                        app:sb_textColor_onSelection="@color/white" />
+
+                    <co.ceryle.segmentedbutton.SegmentedButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        app:sb_text="Past"
+                        app:sb_textColor="@color/green500"
+                        app:sb_textColor_onSelection="@color/white" />
+                </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/layMain">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true">
+                        <ListView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/lv_book"
+                            android:background="@color/grey200"
+                            android:divider="@android:color/transparent"
+                            android:dividerHeight="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="10dp"
+                            android:scrollbars="none">
+                        </ListView>
+                    </ScrollView>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bookingNull">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_13sdp"
+                            android:text="No booking is found"
+                            android:layout_gravity="center_horizontal"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/startBooking"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:textSize="@dimen/_15sdp"
+                            android:text="Start Booking Now"
+                            android:textColor="@color/green"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</FrameLayout>

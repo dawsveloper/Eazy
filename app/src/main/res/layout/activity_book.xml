@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eazy.firda.eazy.BookActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="50dp"
+        android:padding="20dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearlayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/grey600"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/book_name"
+                    android:text=""
+                    android:textColor="@color/grey600"
+                    android:backgroundTint="@color/grey600"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textCursorDrawable="@null"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="@color/grey600"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/book_email"
+                    android:text=""
+                    android:textColor="@color/grey600"
+                    android:backgroundTint="@color/grey600"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textCursorDrawable="@null"
+                    android:inputType="textEmailAddress"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"
+                    android:textColor="@color/grey600"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/book_phone"
+                    android:text=""
+                    android:textColor="@color/grey600"
+                    android:backgroundTint="@color/grey600"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textCursorDrawable="@null"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/layUpload">
+                <RelativeLayout
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/layLicense"
+                    android:clickable="true"
+                    android:background="@drawable/shape_greyrect_greenoutline">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/tag1"
+                            android:src="@drawable/ic_add_a_photo_black_36dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tag1"
+                            android:layout_marginTop="5dp"
+                            android:text="upload license"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/neosans"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:id="@+id/imgLicense"/>
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/whitecircle_outlinegreen_2"
+                            android:layout_margin="7dp"
+                            android:padding="3dp"
+                            android:id="@+id/delLicense"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_close_black_18dp"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layPassport"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="28dp"
+                    android:background="@drawable/shape_greyrect_greenoutline"
+                    android:clickable="true">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/tag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_note_add_black_36dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tag2"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerInParent="true"
+                            android:text="upload passport"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/neosans"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgPassport"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop" />
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/whitecircle_outlinegreen_2"
+                            android:layout_margin="7dp"
+                            android:padding="3dp"
+                            android:visibility="gone"
+                            android:id="@+id/delPassport"
+                            android:src="@drawable/ic_close_black_18dp"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/group_payment"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/book_payday"
+                    android:text="Daily"
+                    android:fontFamily="@font/neosans_light"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/book_payweek"
+                    android:text="Weekly"
+                    android:fontFamily="@font/neosans_light"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/book_paymonth"
+                    android:text="Monthly"
+                    android:fontFamily="@font/neosans_light"/>
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    android:textColor="@color/grey600"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/book_duration"
+                    android:text=""
+                    android:textColor="@color/grey600"
+                    android:backgroundTint="@color/grey600"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textCursorDrawable="@null"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="DATES"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_date_range_grey_400_24dp"
+                    android:tint="@color/green"
+                    android:background="@drawable/circle_outlinegreen"
+                    android:id="@+id/ic_date"
+                    android:layout_centerVertical="true"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/ic_date"
+                    android:layout_marginLeft="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/book_dateStart"
+                        android:text="Mon, 5 Mar, 10:00"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/book_dateEnd"
+                        android:text="Tue, 6 Mar, 10:00"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Change"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/green"
+                    android:clickable="true"
+                    android:id="@+id/book_chgDate"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PICK UP AND RETURN"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_location_on_green_500_24dp"
+                    android:id="@+id/ic_location"
+                    android:background="@drawable/circle_outlinegreen"
+                    android:tint="@color/green"
+                    android:layout_centerVertical="true"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/ic_location"
+                    android:layout_marginLeft="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sukodono, Sidoarjo"
+                        android:id="@+id/book_pickupLocation"
+                        android:lines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Sukodono, Sidoarjo"
+                        android:id="@+id/book_returnLocation"
+                        android:lines="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Change"
+                    android:textColor="@color/green"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:id="@+id/book_chgLocation"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/lay_total">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"/>
+
+                <worker8.com.github.radiogroupplus.RadioGroupPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/group_total"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_wallet"
+                            android:text="Wallet"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/neosans_light"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tag_total_wallet1"
+                                android:text="RM 200"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/tag_total_wallet2"
+                                android:textColor="@color/red_500"
+                                android:text="RM 200"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_cash"
+                            android:text="Cash"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/neosans_light"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tag_total_cash"
+                                android:text="RM 200"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </worker8.com.github.radiogroupplus.RadioGroupPlus>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_book"
+        android:textColor="@color/white"
+        android:text="Book"
+        android:background="@color/green"/>
+
+</RelativeLayout>

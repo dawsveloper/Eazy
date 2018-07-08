@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/group_payment"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payment_day"
+            android:text="Daily"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payment_week"
+            android:text="Weekly"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payment_month"
+            android:text="Monthly"/>
+    </RadioGroup>
+
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:labelText="Duration"
+        app:iconSignifier="@drawable/ic_access_time_grey_500_24dp"
+        app:hasClearButton="true"
+        app:primaryColor="@color/green500"
+        app:panelBackgroundColor="@color/white"
+        app:hasFocus="false"
+        app:isResponsiveIconColor="true">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/book_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:background="@drawable/shape_rect"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:clickable="false"
+            android:id="@+id/lay_book_start">
+
+            <TextView
+                android:id="@+id/book_start_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="11"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/book_start_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_start_day"
+                android:layout_centerHorizontal="true"
+                android:text="February" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@id/book_start_month"
+                android:layout_marginTop="20dp"
+                android:id="@+id/row1"/>
+
+            <TextView
+                android:id="@+id/book_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Time: 03:00"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_keyboard_arrow_right_green_500_24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:background="@drawable/shape_rect"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:clickable="false">
+
+            <TextView
+                android:id="@+id/book_end_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="11"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/book_end_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/book_end_day"
+                android:layout_centerHorizontal="true"
+                android:text="February" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@id/book_end_month"
+                android:layout_marginTop="20dp"
+                android:id="@+id/row12"/>
+
+            <TextView
+                android:id="@+id/book_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/row12"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Time: 03:00"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

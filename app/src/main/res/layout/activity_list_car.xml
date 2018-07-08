@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eazy.firda.eazy.ListCar">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_75sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp">
+            <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                android:id="@+id/segmentedButtonGroup"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:elevation="2dp"
+                app:sbg_animateSelector="fastOutSlowIn"
+                app:sbg_animateSelectorDuration="1000"
+                app:sbg_backgroundColor="@color/white"
+                app:sbg_dividerColor="@color/white"
+                app:sbg_dividerPadding="0dp"
+                app:sbg_borderColor="@color/green"
+                app:sbg_dividerRadius="0dp"
+                app:sbg_dividerSize="0dp"
+                app:sbg_position="1"
+                app:sbg_radius="2dp"
+                app:sbg_selectorColor="@color/green">
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:layout_weight="3"
+                    app:sb_textColor_onSelection="@color/white"
+                    app:sb_textColor="@color/green"
+                    app:sb_text="Price"
+                    app:sb_textTypeface="monospace"/>
+
+                <co.ceryle.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:layout_weight="3"
+                    app:sb_textColor_onSelection="@color/white"
+                    app:sb_textColor="@color/green"
+                    app:sb_text="Rating"
+                    app:sb_textTypeface="monospace"/>
+            </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:id="@+id/svMain">
+                <ListView
+                    android:id="@+id/lv_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:padding="@dimen/_10sdp"
+                    android:scrollbars="none"
+                    android:listSelector="@drawable/list_row_selector" />
+            </ScrollView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No car is available"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:id="@+id/nullCar"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        app:backgroundTint="@color/green"
+        app:pressedTranslationZ="@dimen/_12sdp"
+        android:src="@drawable/ic_filter_list_white_24dp" />
+
+</android.support.design.widget.CoordinatorLayout>

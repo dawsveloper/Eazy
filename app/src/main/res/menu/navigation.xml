@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_shop"
+        android:icon="@drawable/ic_search_green_500_24dp"
+        android:title="Shop" />
+
+    <item
+        android:id="@+id/navigation_gifts"
+        android:icon="@drawable/ic_power_settings_new_green_500_24dp"
+        android:title="Gifts" />
+
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_settings_green_500_24dp"
+        android:title="Check" />
+</menu>

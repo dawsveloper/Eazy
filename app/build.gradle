@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.eazy.firda.eazy"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 3
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    //Google Play Service
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
+    //Google Play Service
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'us.belka:androidtoggleswitch:1.2.2'
+    //toggle library
+    compile 'com.nex3z:toggle-button-group:1.1.2'
+    //toggle library2
+    compile 'com.stepstone.apprating:app-rating:2.2.0'
+    //rating library
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    //circle mage library
+    compile 'com.github.ceryle:SegmentedButton:v2.0.2'
+    //segmented button
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile 'com.github.HITGIF:TextFieldBoxes:1.3.9'
+    compile 'com.github.florent37:materialtextfield:1.0.7'
+    compile 'com.google.maps.android:android-maps-utils:0.5+'
+    compile 'net.sharewire:google-maps-clustering:0.1.3'
+    compile 'com.edmodo:rangebar:1.0.0'
+    compile 'com.squareup:android-times-square:1.6.5@aar'
+    compile 'com.github.worker8:RadioGroupPlus:v1.0.1'
+    compile 'com.github.warkiz.widget:indicatorseekbar:1.2.9'
+    compile 'com.android.support:recyclerview-v7:26.0.0'
+    compile 'com.android.support:cardview-v7:26.0.0'
+    compile 'com.github.apl-devs:appintro:v4.2.3'
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'cn.gavinliu.android.lib:ShapedImageView:0.8.5'
+    compile 'com.allattentionhere:fabulousfilter:0.0.5'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.google.code.gson:gson:2.6.1'
+    compile 'com.jcraft:jsch:0.1.53'
+    implementation 'com.kingfisherphuoc:easy-recyclerview-indicator:1.2'
+    compile fileTree(include: '*.jar', dir: 'libs')
+}

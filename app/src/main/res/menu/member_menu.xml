@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/find"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Search"
+        android:iconTint="@color/green"/>
+
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/ic_directions_car_white_24dp"
+        android:orderInCategory="200"
+        app:showAsAction="always"
+        android:title="Setting"
+        android:iconTint="@color/green"/>
+</menu>

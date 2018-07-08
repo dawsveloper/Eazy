@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eazy.firda.eazy.DescCarOwner">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fuel Type"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carFuel"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:entries="@array/car_fuel"
+                android:background="@drawable/shape_rect_black_outline">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fuel Regulation"
+                android:layout_marginTop="20dp"/>
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/carRegulation"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:entries="@array/car_regulation"
+                android:background="@drawable/shape_rect_black_outline">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Features"
+                android:layout_marginTop="20dp"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_marginTop="5dp"
+                android:id="@+id/carAc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Air Conditioner"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:layout_marginTop="20dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/carDesc"
+                android:ems="10"
+                android:padding="10dp"
+                android:text="asds"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_whiterect_greenoutline"/>
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:layout_alignParentBottom="true"
+        android:text="Save"
+        android:id="@+id/btnSave"
+        android:textColor="@color/white"/>
+</RelativeLayout>
